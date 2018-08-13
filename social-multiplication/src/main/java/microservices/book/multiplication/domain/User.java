@@ -11,26 +11,25 @@ import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 /**
-* This represents a Multiplication (a * b).
+* Identifies the attempt from a {@link User} to solve a
+* {@link Multiplication}.
 */
 @RequiredArgsConstructor
 @Getter
 @ToString
 @EqualsAndHashCode
 @Entity
-public final class Multiplication {
+public final class User {
 	
 	@Id
 	@GeneratedValue
-	@Column(name = "MULTIPLICATION_ID")
+	@Column(name = "USER_ID")
 	private Long id;
+
+	private final String alias;
 	
-	// Both factors
-	private final int factorA;
-	private final int factorB;
-	
-	// Empty constructor for JSON/JPA
-	public Multiplication() {
-		this(0,0);
+	// Empty constructor for JSON (de)serialization
+	protected User() {
+		alias = null;
 	}
 }
