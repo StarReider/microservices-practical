@@ -1,10 +1,20 @@
 package microservices.book.multiplication.domain;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
+
+@RequiredArgsConstructor
+@Getter
+@ToString
+@EqualsAndHashCode
 public class Multiplication {
 	
 	// Both factors
-	private int factorA;
-	private int factorB;
+	private final int factorA;
+	private final int factorB;
+	private int g;
 	// The result of the operation A * B
 	private int result;
 	
@@ -13,29 +23,4 @@ public class Multiplication {
 		this.factorB = factorB;
 		this.result =  factorA * factorB;
 	}
-
-	public int getFactorA() {
-		return factorA;
-	}
-
-	public void setFactorA(int factorA) {
-		this.factorA = factorA;
-	}
-
-	public int getFactorB() {
-		return factorB;
-	}
-
-	public void setFactorB(int factorB) {
-		this.factorB = factorB;
-	}
-
-	public int getResult() {
-		return result;
-	}
-
-	@Override
-	public String toString() {
-		return "Multiplication [factorA=" + factorA + ", factorB=" + factorB + ", result(A*B)=" + result + "]";
-	}
-}
+} 
