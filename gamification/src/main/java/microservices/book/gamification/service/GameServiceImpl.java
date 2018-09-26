@@ -39,7 +39,7 @@ public class GameServiceImpl implements GameService {
 			
 			List<BadgeCard> badgeCards = processForBadges(userId, attemptId);
 			
-			new GameStats(userId, scoreCard.getScore(),
+			return new GameStats(userId, scoreCard.getScore(),
 					badgeCards.stream()
 					.map(BadgeCard::getBadge)
 					.collect(Collectors.toList()));
