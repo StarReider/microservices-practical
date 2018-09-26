@@ -26,6 +26,7 @@ public class LeaderBoardServiceImplTest {
     public void setUp() {		
 		// With this call to initMocks we tell Mockito to process the annotations
         MockitoAnnotations.initMocks(this);
+        leaderBoardService = new LeaderBoardServiceImpl(scoreCardRepository);
 	}
 	
 	@Test
