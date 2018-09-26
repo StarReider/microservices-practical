@@ -30,8 +30,7 @@ public class GameServiceImplTest {
     private BadgeCardRepository badgeCardRepository;
 	
 	@Before
-    public void setUp() {
-		
+    public void setUp() {	
 		// With this call to initMocks we tell Mockito to process the annotations
         MockitoAnnotations.initMocks(this);
 	}
