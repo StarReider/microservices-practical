@@ -1,7 +1,5 @@
 package microservices.book.gamification.client.dto;
 
-import javax.persistence.Entity;
-
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.EqualsAndHashCode;
@@ -17,7 +15,6 @@ import microservices.book.gamification.client.MultiplicationResultAttemptDeseria
 @Getter
 @ToString
 @EqualsAndHashCode
-@Entity
 @JsonDeserialize(using = MultiplicationResultAttemptDeserializer.class)
 public final class MultiplicationResultAttempt {
 	
