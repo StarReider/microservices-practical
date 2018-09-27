@@ -95,6 +95,7 @@ public class MultiplicationServiceImpl implements MultiplicationService {
 
 	@Override
 	public MultiplicationResultAttempt getResultById(Long attemptId) {		
-		return attemptRepository.findOne(attemptId);
+		Optional<MultiplicationResultAttempt> attempt = attemptRepository.findById(attemptId);
+		return attempt.orElse(null);
 	}
 }
