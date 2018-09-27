@@ -16,5 +16,5 @@ public interface MultiplicationResultAttemptRepository extends CrudRepository<Mu
 	*/
 	List<MultiplicationResultAttempt> findTop5ByUserAliasOrderByIdDesc(final String userAlias);
 	
-	MultiplicationResultAttempt findResultById(final Long resultId);
+	MultiplicationResultAttempt findOne(final Long resultId);
 }
