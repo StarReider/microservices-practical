@@ -71,7 +71,7 @@ $(document).ready(function() {
 
 		// Send the data using post
 		$.ajax({
-			url : '/results',
+			url : 'http://localhost:8080/results',
 			type : 'POST',
 			data : JSON.stringify(data),
 			contentType : "application/json; charset=utf-8",
