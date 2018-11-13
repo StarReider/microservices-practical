@@ -134,7 +134,7 @@ public class GameServiceImpl implements GameService {
 
 	@Override
 	public GameStats retrieveStatsForUser(Long userId) {
-		int score = scoreCardRepository.getTotalScoreForUser(userId);
+		Integer score = scoreCardRepository.getTotalScoreForUser(userId);
 		
 		List<BadgeCard> badgeCards = badgeCardRepository
 			.findByUserIdOrderByBadgeTimestampDesc(userId);
