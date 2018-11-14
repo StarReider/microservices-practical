@@ -17,6 +17,12 @@ zuul:
       path: /stats/**
       url: http://localhost:8081/stats
     
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    
 ribbon:
   eureka:
     enabled: false
