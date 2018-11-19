@@ -4,6 +4,7 @@ import java.util.List;
 
 import microservices.book.multiplication.domain.Multiplication;
 import microservices.book.multiplication.domain.MultiplicationResultAttempt;
+import microservices.book.multiplication.domain.User;
 
 public interface MultiplicationService {
 
@@ -35,4 +36,6 @@ public interface MultiplicationService {
      * @return the {@link MultiplicationResultAttempt} object matching the id, otherwise null.
      */
 	MultiplicationResultAttempt getResultById(final Long attemptId);
+	
+	User getUserById(final Long userId);
 }

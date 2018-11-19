@@ -98,4 +98,10 @@ public class MultiplicationServiceImpl implements MultiplicationService {
 		Optional<MultiplicationResultAttempt> attempt = attemptRepository.findById(attemptId);
 		return attempt.orElse(null);
 	}
+
+	@Override
+	public User getUserById(Long userId) {
+		Optional<User> user = userRepository.findById(userId);
+		return user.orElse(null);
+	}
 }
