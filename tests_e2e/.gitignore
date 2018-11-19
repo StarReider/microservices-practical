@@ -23,9 +23,5 @@
 /dist/
 /nbdist/
 /.nb-gradle/
-<<<<<<< HEAD
 /.mvn/
 /bin/
-=======
-/.mvn/
->>>>>>> branch 'master' of https://github.com/StarReider/microservices-practical
