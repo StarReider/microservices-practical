@@ -42,4 +42,6 @@ public interface ScoreCardRepository extends CrudRepository<ScoreCard, Long>{
 	given user, sorted by most recent.
 	*/
 	List<ScoreCard> findByUserIdOrderByScoreTimestampDesc(final Long userId);
+	
+	ScoreCard findByAttemptId(final Long attemptId);
 }

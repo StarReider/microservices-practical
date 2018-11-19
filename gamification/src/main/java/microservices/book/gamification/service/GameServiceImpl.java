@@ -142,4 +142,9 @@ public class GameServiceImpl implements GameService {
 		return new GameStats(userId, score, badgeCards.stream()
 			.map(BadgeCard::getBadge).collect(Collectors.toList()));
 	}
+
+	@Override
+	public ScoreCard getScoreForAttempt(Long attemptId) {
+		return scoreCardRepository.findByAttemptId(attemptId);
+	}
 }
