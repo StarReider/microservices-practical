@@ -1,0 +1,12 @@
+---
+applications:
+- name: gamification
+  memory: 1024M
+  health-check-type: http
+  health-check-http-endpoint: /actuator/health
+  stack: cflinuxfs2
+  services:
+  - circuit-breaker
+  - rabbit-mq
+  - service-registry
+  - config-server

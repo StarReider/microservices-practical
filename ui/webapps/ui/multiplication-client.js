@@ -1,4 +1,4 @@
-var SERVER_URL = "http://localhost:8000/api";
+var SERVER_URL = "http://multiplication.cfapps.io";
 
 function updateMultiplication() {
 	$.ajax({
