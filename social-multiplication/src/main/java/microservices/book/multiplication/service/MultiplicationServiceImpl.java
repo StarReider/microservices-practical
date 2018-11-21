@@ -95,13 +95,15 @@ public class MultiplicationServiceImpl implements MultiplicationService {
 
 	@Override
 	public MultiplicationResultAttempt getResultById(Long attemptId) {		
-		Optional<MultiplicationResultAttempt> attempt = attemptRepository.findById(attemptId);
-		return attempt.orElse(null);
+		return attemptRepository.findById(attemptId)
+				.orElseThrow(() -> new IllegalArgumentException(
+				"The requested attemptId [" + attemptId +"] does not exist."));
 	}
 
 	@Override
 	public User getUserById(Long userId) {
-		Optional<User> user = userRepository.findById(userId);
-		return user.orElse(null);
+		return userRepository.findById(userId).
+				orElseThrow(() -> new IllegalArgumentException(
+				"The requested userId [" + userId +"] does not exist."));
 	}
 }
