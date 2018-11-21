@@ -25,7 +25,7 @@ public class UserController {
 		this.serverPort = serverPort;
 	}
 	
-	@GetMapping("/user/{userId}")
+	@GetMapping("/{userId}")
 	User getUser(@PathVariable("userId") final Long userId) {
 		log.info("Retrieving user {} from server @ {}", userId, serverPort);
 		return multiplicationService.getUserById(userId);
