@@ -2,7 +2,7 @@ package microservices.book.testutils.beans;
 
 public class User {
 	private String alias;
-	private Long id;
+	private long id;
 	
 	public String getAlias() {
 		return alias;
@@ -12,11 +12,11 @@ public class User {
 		this.alias = alias;
 	}
 	
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 	
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}	
 }

@@ -1,16 +1,15 @@
 package microservices.book.testutils.beans;
 
 public class AttemptResponse {
-	private Long id;
+	private long id;
 	private User user;
-	private int resultAttempt;
 	private boolean correct;
 	
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 	
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	
@@ -20,14 +19,6 @@ public class AttemptResponse {
 	
 	public void setUser(User user) {
 		this.user = user;
-	}
-	
-	public int getResultAttempt() {
-		return resultAttempt;
-	}
-	
-	public void setResultAttempt(int resultAttempt) {
-		this.resultAttempt = resultAttempt;
 	}
 	
 	public boolean isCorrect() {
