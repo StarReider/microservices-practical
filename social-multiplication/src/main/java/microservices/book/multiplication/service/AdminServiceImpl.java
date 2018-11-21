@@ -20,6 +20,7 @@ public class AdminServiceImpl implements AdminService {
     						final MultiplicationResultAttemptRepository multiplicationResultAttemptRepository) {
     	this.multiplicationRepository = multiplicationRepository;
     	this.userRepository = userRepository;
+    	this.multiplicationResultAttemptRepository = multiplicationResultAttemptRepository;
     }
     
 	@Override
