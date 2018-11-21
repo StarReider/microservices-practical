@@ -50,7 +50,7 @@ public class MultiplicationServiceImpl implements MultiplicationService {
 
 	@Transactional
 	@Override
-	public boolean checkAttempt(MultiplicationResultAttempt resultAttempt) {
+	public MultiplicationResultAttempt checkAttempt(MultiplicationResultAttempt resultAttempt) {
 		
 		// Check if the user already exists for that alias
 		Optional<User> user = userRepository.findByAlias(resultAttempt.getUser().getAlias());
@@ -85,7 +85,7 @@ public class MultiplicationServiceImpl implements MultiplicationService {
 											  checkedAttempt.isCorrect()));
 		
 		// Returns the result		
-		return correct;
+		return checkedAttempt;
 	}
 	
 	@Override
