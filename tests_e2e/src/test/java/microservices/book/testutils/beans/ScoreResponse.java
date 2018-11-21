@@ -10,6 +10,9 @@ public class ScoreResponse {
 	public ScoreResponse(int score) {
 		this.score = score;
 	}
+	
+	 public ScoreResponse() {
+	 }
 
 	public Long getCardId() {
 		return cardId;

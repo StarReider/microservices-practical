@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Stats {
 	private Long userId;
-	private Integer score;
+	private int score;
 	private List<String> badges;
 	
 	public Long getUserId() {
@@ -15,11 +15,11 @@ public class Stats {
 		this.userId = userId;
 	}
 	
-	public Integer getScore() {
+	public int getScore() {
 		return score;
 	}
 	
-	public void setScore(Integer score) {
+	public void setScore(int score) {
 		this.score = score;
 	}
 
